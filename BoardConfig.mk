@@ -189,6 +189,9 @@ TARGET_POWERHAL_VARIANT := qcom
 TARGET_BOOTANIMATION_PRELOAD := true
 TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 
+# Enable real time lockscreen charging current values
+BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
+
 # Properties
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 
