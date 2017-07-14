@@ -1089,7 +1089,6 @@ vendor/lib64/libquipc_os_api.so
 vendor/lib64/libsmemlog.so
 
 # Radio
--app/QtiTelephonyService/QtiTelephonyService.apk
 -app/datastatusnotification/datastatusnotification.apk
 -app/embms/embms.apk
 -app/fastdormancy/fastdormancy.apk
@@ -1103,13 +1102,9 @@ etc/data/dsi_config.xml
 etc/data/netmgr_config.xml
 etc/permissions/embms.xml
 etc/permissions/qcrilhook.xml
-etc/permissions/telephonyservice.xml
-framework/QtiTelephonyServicelibrary.jar
 framework/embmslibrary.jar
 -framework/qcrilhook.jar
-framework/qti-telephony-common.jar|37d692fb171d0ee3269676a9e9998d2e3bfd9488
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
-vendor/bin/qti
 vendor/lib/liblqe.so
 vendor/lib/libmdmdetect.so
 vendor/lib64/libconfigdb.so
