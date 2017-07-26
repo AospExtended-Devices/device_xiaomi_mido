@@ -385,14 +385,6 @@ on post-fs-data
     #WAPI
     mkdir /data/misc/wapi_certificate 0770 system wifi
 
-service perfd /system/vendor/bin/perfd
-   class main
-   user root
-   group root readproc
-   disabled
-   socket perfd seqpacket 0666 root system
-   writepid /dev/cpuset/system-background/tasks
-
 service iop /system/bin/iop
     class main
     user root
@@ -403,6 +395,11 @@ service iop /system/bin/iop
 
 on property:hw.fm.init=*
     write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
+
+# Create PERFD deamon related dirs
+    mkdir /data/system/perfd 2770 root system
+    rm /data/system/perfd/default_values
+    start perfd
 
 on property:sys.boot_completed=1
     write /dev/kmsg "Boot completed "
