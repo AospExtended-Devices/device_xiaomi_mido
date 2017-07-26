@@ -1,3 +1,8 @@
+# Set perfd properties
+    setprop sys.post_boot.parsed 1
+
+    # Start IO prefetcher service
+    start iop
 
 service perfd /system/vendor/bin/perfd
     class main
@@ -5,4 +10,12 @@ service perfd /system/vendor/bin/perfd
     group root readproc
     disabled
     socket perfd seqpacket 0666 root system
+    writepid /dev/cpuset/system-background/tasks
+
+service iop /system/bin/iop
+    class main
+    user root
+    group root
+    disabled
+    socket iop seqpacket 0666 root system
     writepid /dev/cpuset/system-background/tasks
