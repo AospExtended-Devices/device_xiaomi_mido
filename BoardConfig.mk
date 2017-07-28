@@ -118,6 +118,9 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/enable_dt2w"
 # CNE / DPM
 BOARD_USES_QCNE := true
 
+# Cpusets
+ENABLE_CPUSETS := true
+
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
@@ -192,6 +195,7 @@ BOARD_USES_QC_TIME_SERVICES := true
 TARGET_USE_SDCLANG := true
 
 # RIL
+BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 TARGET_RIL_VARIANT := caf
 
 # Recovery

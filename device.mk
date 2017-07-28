@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     SnapdragonCamera
 
+# Consumerir
+PRODUCT_PACKAGES += \
+    consumerir.msm8953
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8953 \
@@ -169,10 +173,6 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
-
-# Libshims
-PRODUCT_PACKAGES += \
-    libshims_ims
 
 # Lights
 PRODUCT_PACKAGES += \
