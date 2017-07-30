@@ -106,6 +106,10 @@ PRODUCT_PACKAGES += \
     libmm-qcamera \
     SnapdragonCamera
 
+# Email
+PRODUCT_PACKAGES += \
+    Email
+
 # Consumerir
 PRODUCT_PACKAGES += \
     consumerir.msm8953
