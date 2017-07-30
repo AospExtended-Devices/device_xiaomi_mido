@@ -172,6 +172,9 @@ persist.radio.force_on_dc=true
 persist.radio.NO_STAPA=1
 persist.radio.redir_party_num=1
 
+# SdcardFs
+ro.sys.sdcardfs=true
+
 # Time Services
 persist.timed.enable=true
 
