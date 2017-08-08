@@ -79,6 +79,11 @@ ro.opengles.version=196610
 ro.qualcomm.cabl=0
 ro.sf.lcd_density=480
 
+# Higher fling velocities to smooth scrolling
+# and provide better responsiveness
+ro.min.fling_velocity=140
+ro.max.fling_velocity=20000
+
 # DRM
 drm.service.enabled=true
 
