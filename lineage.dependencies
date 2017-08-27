@@ -6,5 +6,9 @@
  {
    "repository": "android_kernel_xiaomi_msm8953",
    "target_path": "kernel/xiaomi/msm8953"
+ },
+ {
+   "repository": "android_device_lineage_sepolicy",
+   "target_path": "device/lineage/sepolicy"
  }
 ]
