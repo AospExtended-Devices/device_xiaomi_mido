@@ -63,8 +63,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl \
     audiod \
     audio.a2dp.default \
     audio.primary.msm8953 \
@@ -75,6 +73,12 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libqcompostprocbundle \
     tinymix
+
+PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.soundtrigger@2.0-impl
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
@@ -97,6 +101,7 @@ PRODUCT_COPY_FILES += \
 	$(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/system/etc/usb_audio_policy_configuration.xml
 
 PRODUCT_PACKAGES += \
+    libbt-vendor \
     android.hardware.bluetooth@1.0-impl
 
 # Camera
@@ -112,15 +117,22 @@ PRODUCT_PACKAGES += \
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
-    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
     android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
     copybit.msm8953 \
     gralloc.msm8953 \
     hwcomposer.msm8953 \
+    libgenlock \
     memtrack.msm8953 \
     liboverlay \
     libjni_livedisplay \
     libtinyxml
+
+# DRM
+PRODUCT_PACKAGES += \
+android.hardware.drm@1.0-impl
 
 # Ebtables
 PRODUCT_PACKAGES += \
@@ -141,6 +153,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# GNSS HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl
+
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8953 \
@@ -154,6 +171,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/lowi.conf:system/etc/lowi.conf \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf \
+
+# HIDL
+PRODUCT_COPY_FILES += \
+$(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
+# Gatekeeper HAL
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
 
 # Input
 PRODUCT_COPY_FILES += \
@@ -231,6 +256,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.qcom.bt.sh \
     init.qcom.post_boot.sh
+
+
+# RenderScript HAL
+PRODUCT_PACKAGES += \
+    android.hardware.renderscript@1.0-impl
 
 # RIL
 PRODUCT_PACKAGES += \
