@@ -298,6 +298,7 @@ PRODUCT_PACKAGES += \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwpa_client \
+    wificond \
     hostapd \
     dhcpcd.conf \
     wpa_supplicant \
