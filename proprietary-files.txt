@@ -89,7 +89,7 @@ etc/firmware/rampatch_tlv_3.0.tlv|5f8120ea99ec8462f5ee21a29e0b290a031524c0
 etc/firmware/rampatch_tlv_3.2.tlv|1c934123b0571803cb3404a0d884fdf97241d0cb
 
 # CNE - from oxygen (MiMax 2)
--priv-app/CNEService/CNEService.apk|fd70751e25d26b22a885e5d6599bf04ba3fe705e
+-priv-app/CNEService:priv-app/CNEService/CNEService.apk:PRESIGNED|ca54263ced79ebe6debf1bc0f4bd1a933788ea3a
 bin/cnd|a188be1cb33843f9b39456fe8e8c7e6aa55f9485
 etc/cne/SwimConfig.xml|68dedcca1c2ac18cf81fdee1854de16a3a60dd02
 etc/cne/andsfCne.xml|f81a69eac5dd16bbb195a0fcf1211a51cc014553
@@ -113,7 +113,7 @@ etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
 etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
 framework/ConnectivityExt.jar|67025d09bbc7bb87bca1d15ab9c133eeb1ef2b9d
 framework/cneapiclient.jar|3cb56a579341acfb16d2be2e41bac2c7b6ac34b4
-framework/com.quicinc.cne.jar|773982968679874bc77847b641ef894e7ee09957
+framework/com.quicinc.cne.jar|5da097cf4ecf1d98a17dd25edfe08875dc71ac0d
 vendor/lib/libcne.so|0233909b10d70d76640301d8cfaea6516ad560db
 vendor/lib/libcneapiclient.so|1eea71722e08a3c03cc6b76e9a7a49b3065bea5b
 vendor/lib/libcneqmiutils.so|df7703daf0e8dec5dbfe0b682f9722229df0a9de
