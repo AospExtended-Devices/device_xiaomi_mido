@@ -90,7 +90,7 @@ etc/firmware/rampatch_tlv_3.2.tlv|1c934123b0571803cb3404a0d884fdf97241d0cb
 
 # CNE - from oxygen (MiMax 2)
 -priv-app/CNEService/CNEService.apk|fd70751e25d26b22a885e5d6599bf04ba3fe705e
-bin/cnd|38538ec894c0d4e3dcb9f950ba4870acb299dcc7
+bin/cnd|a188be1cb33843f9b39456fe8e8c7e6aa55f9485
 etc/cne/SwimConfig.xml|68dedcca1c2ac18cf81fdee1854de16a3a60dd02
 etc/cne/andsfCne.xml|f81a69eac5dd16bbb195a0fcf1211a51cc014553
 etc/cne/wqeclient/ATT/ATT_profile1.xml|c3072f14098d64c2e799423c046d71691b10af7a
@@ -1082,7 +1082,9 @@ vendor/lib64/libril-qc-qmi-1.so|7fe3ab9d30c73253b4d4c1b5e049b613d86253ea
 vendor/lib64/libril-qc-radioconfig.so|54b255638caa9be2f14aad990d41d6832677beb1
 vendor/lib64/libril-qcril-hook-oem.so|ec73e3c895630039bbf890882ef02761ecf2b1c9
 vendor/lib64/librilqmiservices.so|a3ba7243404583b64f2b2a2444bb6458cbb2330e
-vendor/lib64/libsettings.so|c763cafb33a41a7d82f6f67506355a37dee386e2
+vendor/lib64/libprotobuf-cpp-biss.so|d0b821e84fb5080c8c7916d505cbd46bf2aae96c
+vendor/lib64/libprotobuf-cpp-shit.so|140e067001e6d2812cf937699cd11f815e9f6c86
+vendor/lib64/libsettings.so|8ced9152b6715f9d4173e6e6819f49d8a5f14212
 vendor/lib64/libsystem_health_mon.so|1b0488d2aa7a8500f9e8def0c9e8c9ddbb0bb3fc
 vendor/qcril.db|c33dbcb0dd5c3deeae801fb1fc01d80ad6d68441
 
