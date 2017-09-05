@@ -426,6 +426,7 @@ service cnd /system/bin/cnd
     class main
     socket cnd stream 660 root inet
     writepid /dev/cpuset/system-background/tasks
+    setenv LD_LIBRARY_PATH /system/vendor/lib64
 
 service dpmd /system/bin/dpmd
     class late_start
@@ -469,6 +470,7 @@ service config_bt_addr /system/bin/btnvtool -O
 service netmgrd /system/bin/netmgrd
     class main
     writepid /dev/cpuset/system-background/tasks
+    setenv LD_LIBRARY_PATH /system/vendor/lib64
 
 service ipacm-diag /system/bin/ipacm-diag
     class main
