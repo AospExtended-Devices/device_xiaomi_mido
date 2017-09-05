@@ -157,10 +157,6 @@ PRODUCT_PACKAGES += \
     libfmjni \
     android.hardware.broadcastradio@1.0-impl
 
-# Fs_config
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # GNSS HAL
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl
@@ -278,6 +274,15 @@ PRODUCT_PACKAGES += \
     libxml2 \
     rild_socket \
     Stk
+
+# Libshims
+PRODUCT_PACKAGES += \
+    libshims_ims
+
+# Telephony packages
+PRODUCT_PACKAGES += \
+    ims-ext-common \
+    telephony-ext
 
 # Seccomp policy
 PRODUCT_COPY_FILES += \
