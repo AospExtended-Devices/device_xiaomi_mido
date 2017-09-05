@@ -609,12 +609,13 @@ service qseeproxydaemon /system/vendor/bin/qseeproxydaemon
 on charger
     setprop persist.sys.usb.config charging
 
-service fingerprintd /system/bin/fingerprintd
+service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
     class late_start
     user system
-    group system sdcard_rw
-    system system
-    writepid /dev/cpuset/system-background/tasks
+    group system input
     disabled
 
 service gx_fpd /system/bin/gx_fpd
@@ -626,13 +627,13 @@ service gx_fpd /system/bin/gx_fpd
 on property:sys.fp.vendor=switchf
     stop gx_fpd
     setprop sys.fp.vendor searchf
-    start fingerprintd
+    start fps_hal
     setprop fpc.fp.miui.token 0
     setprop ro.boot.fpsensor fpc
     setprop ro.hardware.fingerprint searchf
 
 on property:sys.fp.onstart=1
-   start fingerprintd
+   start fps_hal
    setprop goodix.fp.miui.analyse 1
    setprop goodix.fp.miui.token 0
    setprop ro.boot.fpsensor gdx
@@ -643,3 +644,4 @@ on property:vold.decrypt=trigger_restart_min_framework
 
 on property:vold.decrypt=trigger_restart_framework
     restart time_daemon
+
