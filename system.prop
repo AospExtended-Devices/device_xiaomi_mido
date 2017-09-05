@@ -172,7 +172,7 @@ service.qti.ims.enabled=1
 telephony.lteOnCdmaDevice=1
 
 # SdcardFs
-ro.sys.sdcardfs=true
+ro.sys.sdcardfs=false
 
 # Time Services
 persist.timed.enable=true
