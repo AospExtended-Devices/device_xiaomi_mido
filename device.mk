@@ -154,7 +154,8 @@ PRODUCT_PACKAGES += \
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
-    libfmjni
+    libfmjni \
+    android.hardware.broadcastradio@1.0-impl
 
 # Fs_config
 PRODUCT_PACKAGES += \
