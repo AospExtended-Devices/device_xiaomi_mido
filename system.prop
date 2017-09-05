@@ -41,7 +41,9 @@ flac.sw.decoder.24bit.support=true
 # Bluetooth
 bluetooth.hfp.client=1
 qcom.bluetooth.soc=smd
-config.disable_bluetooth=true
+ro.bluetooth.dun=true
+ro.bluetooth.hfp.ver=1.7
+ro.bluetooth.sap=true
 
 # Camera
 persist.camera.isp.clock.optmz=0
