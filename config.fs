@@ -4,6 +4,12 @@ user: AID_BLUETOOTH
 group: AID_BLUETOOTH
 caps: BLOCK_SUSPEND
 
+[system/vendor/bin/qvrservice]
+mode: 0755
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: SYS_NICE
+
 [system/bin/cnss-daemon]
 mode: 0755
 user: AID_SYSTEM
