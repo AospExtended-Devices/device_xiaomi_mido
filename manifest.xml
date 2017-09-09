@@ -31,6 +31,21 @@
         <transport arch="32+64">passthrough</transport>
         <version>2.1</version>
     </hal>
+    <hal format="hidl">    
+        <name>android.hardware.drm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICryptoFactory</name>
+            <instance>widevine</instance>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IDrmFactory</name>
+            <instance>widevine</instance>
+            <instance>default</instance>
+        </interface>
+    </hal>
     <hal format="hidl">
         <name>android.hardware.graphics.mapper</name>
         <transport arch="32+64">passthrough</transport>
@@ -147,4 +162,3 @@
         </interface>
     </hal>
 </manifest>
-
