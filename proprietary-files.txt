@@ -811,7 +811,6 @@ lib/libloc_api_v02.so|c5c5d2ca200ef59cb091475becf68a5455d774d1
 lib/libloc_ds_api.so|127a6dc3f55a05880895721eb32fd692d49370ff
 lib64/libloc_api_v02.so|44bdad0ca52a0a9ae1fe9cbab575cf4044eeb604
 lib64/libloc_ds_api.so|0e6cbcec843cf5dbdddb0828c785b47eb5d53c59
-vendor/bin/slim_daemon|63bcb44a826177141750651ff677c1ad1d782a6e
 vendor/lib/hw/flp.default.so|9e360ae26bc376910ff67ef29ba5bd8754745bfb
 vendor/lib/libalarmservice_jni.so|10b0d211f34ad1480e4c5a97429c4888ed47bbe3
 vendor/lib/libdataitems.so|f23a7509da7d6a6179be933fb74a4a6fee6a7371
