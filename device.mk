@@ -172,6 +172,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/gps/etc/sap.conf:system/etc/sap.conf \
     $(LOCAL_PATH)/gps/etc/xtwifi.conf:system/etc/xtwifi.conf \
 
+# Netutils
+PRODUCT_PACKAGES += \
+    netutils-wrapper-1.0
+
 # HIDL
 PRODUCT_COPY_FILES += \
 $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
