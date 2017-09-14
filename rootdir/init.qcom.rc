@@ -128,8 +128,6 @@ on boot
 
     chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
 
-    setprop ro.qualcomm.bt.hci_transport smd
-
     #For bridgemgr daemon to inform the USB driver of the correct transport
     chown radio radio /sys/class/android_usb/f_rmnet_smd_sdio/transport
 
@@ -417,6 +415,7 @@ on property:sys.boot_completed=1
 
 on property:vold.decrypt=trigger_restart_framework
     start config_bt_addr
+    start config_bluetooth
     start wcnss-service
 
 on property:persist.env.fastdorm.enabled=true
@@ -449,11 +448,11 @@ service tftp_server /system/bin/tftp_server
    user root
    writepid /dev/cpuset/system-background/tasks
 
-on property:wc_transport.start_hci=true
-    start start_hci_filter
+on property:wc_transport.start_root=true
+    start hci_filter_root
 
-on property:wc_transport.start_hci=false
-    stop start_hci_filter
+on property:wc_transport.start_root=false
+    stop hci_filter_root
 
 service start_hci_filter /system/bin/wcnss_filter
     class late_start
@@ -465,6 +464,11 @@ service config_bt_addr /system/bin/btnvtool -O
     class core
     user bluetooth
     group bluetooth radio
+    oneshot
+
+service config_bluetooth /system/bin/sh /system/etc/init.qcom.bt.sh "onboot"
+    class core
+    user root
     oneshot
 
 service netmgrd /system/bin/netmgrd
