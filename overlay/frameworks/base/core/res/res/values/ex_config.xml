@@ -89,4 +89,13 @@
   <!-- Whether cpu boost is enabled right after boot -->
   <bool name="config_enableCpuBoostOnBoot">true</bool>
 
+    <!-- Whether cpu boost is enabled for PanelView fling -->
+   <bool name="config_enableCpuBoostForPanelViewFling">false</bool>
+   <integer-array name="panelview_flingboost_param_value">
+       <item>0x40C00000</item> <!-- SCHEDBOOST resource opcode-->
+       <item>0x1</item>        <!-- SCHEDBOOST resource value-->
+       <item>0x40800000</item> <!-- CPUBOOST_MIN_FREQ resource opcode-->
+       <item>0x514</item>      <!-- CPUBOOST MIN_FREQ resource value-->
+</integer-array>
+
 </resources>
