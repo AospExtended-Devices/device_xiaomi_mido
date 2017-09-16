@@ -126,7 +126,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # Dexpreopt
 ifeq ($(HOST_OS),linux)
-ifneq ($(TARGET_BUILD_VARIANT),eng)
+ifneq ($(TARGET_BUILD_VARIANT),userdebug)
 WITH_DEXPREOPT := true
 WITH_DEXPREOPT_DEBUG_INFO := false
 USE_DEX2OAT_DEBUG := false

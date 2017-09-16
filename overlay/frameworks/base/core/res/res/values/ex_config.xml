@@ -80,14 +80,14 @@
     </integer-array>
 
   <!-- Whether Keypress Boost is enabled -->
-  <bool name="config_enableKeypressBoost">true</bool>
+  <!--bool name="config_enableKeypressBoost">true</bool-->
 
   <!-- Whether FP unlock Boost is enabled 
                Depends on Keypress Boost -->
-  <bool name="config_enableFPUnlockBoost">true</bool>
+  <!--bool name="config_enableFPUnlockBoost">true</bool-->
 
   <!-- Whether cpu boost is enabled right after boot -->
-  <bool name="config_enableCpuBoostOnBoot">true</bool>
+  <!--bool name="config_enableCpuBoostOnBoot">true</bool-->
 
     <!-- Whether cpu boost is enabled for PanelView fling -->
    <bool name="config_enableCpuBoostForPanelViewFling">false</bool>
