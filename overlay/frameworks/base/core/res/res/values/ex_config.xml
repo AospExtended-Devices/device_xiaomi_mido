@@ -16,4 +16,8 @@
   <!-- Whether Keypress Boost is enabled -->
   <bool name="config_enableKeypressBoost">true</bool>
 
+  <!-- Whether FP unlock Boost is enabled 
+               Depends on Keypress Boost -->
+  <bool name="config_enableFPUnlockBoost">true</bool>
+
 </resources>
