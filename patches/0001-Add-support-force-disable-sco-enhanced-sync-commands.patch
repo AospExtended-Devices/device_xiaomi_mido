@@ -1,0 +1,64 @@
+From 1014eefa9f08e825ab2c4a36abe3eea0d228c082 Mon Sep 17 00:00:00 2001
+From: thp1997 <tirthpatel49@gmail.com>
+Date: Sat, 30 Sep 2017 06:34:50 +0000
+Subject: [PATCH] Add support force disable sco enhanced sync commands
+
+Change-Id: I3f3480a10d0c447dc4ef78b35a7d03df8f52a041
+---
+ device/src/controller.cc | 9 +++++++++
+ include/bt_target.h      | 6 ++++++
+ 2 files changed, 15 insertions(+)
+
+diff --git a/device/src/controller.cc b/device/src/controller.cc
+index f12a95bd..b38ce2cb 100644
+--- a/device/src/controller.cc
++++ b/device/src/controller.cc
+@@ -22,6 +22,7 @@
+ 
+ #include <base/logging.h>
+ 
++#include "bt_target.h"
+ #include "bt_types.h"
+ #include "btcore/include/event_mask.h"
+ #include "btcore/include/module.h"
+@@ -365,12 +366,20 @@ static bool supports_master_slave_role_switch(void) {
+ 
+ static bool supports_enhanced_setup_synchronous_connection(void) {
+   assert(readable);
++#if (BTM_SCO_ENHANCED_SYNC_DISABLED == TRUE)
++  return false;
++#else
+   return HCI_ENH_SETUP_SYNCH_CONN_SUPPORTED(supported_commands);
++#endif
+ }
+ 
+ static bool supports_enhanced_accept_synchronous_connection(void) {
+   assert(readable);
++#if (BTM_SCO_ENHANCED_SYNC_DISABLED == TRUE)
++  return false;
++#else
+   return HCI_ENH_ACCEPT_SYNCH_CONN_SUPPORTED(supported_commands);
++#endif
+ }
+ 
+ static bool supports_ble(void) {
+diff --git a/include/bt_target.h b/include/bt_target.h
+index 05b5ff17..4bd52148 100644
+--- a/include/bt_target.h
++++ b/include/bt_target.h
+@@ -308,6 +308,12 @@
+ #define BTM_DISC_DURING_RS TRUE
+ #endif
+ 
++/*  This is used to work around a controller bug that report supporting
++ *  enhanced synchronous commands */
++#ifndef BTM_SCO_ENHANCED_SYNC_DISABLED
++#define BTM_SCO_ENHANCED_SYNC_DISABLED FALSE
++#endif
++
+ /**************************
+  * Initial SCO TX credit
+  ************************/
+-- 
+2.11.0
+
