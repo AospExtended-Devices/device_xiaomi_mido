@@ -602,12 +602,11 @@ on charger
     setprop persist.sys.usb.config charging
 
 service fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service
-    # "class hal" causes a race condition on some devices due to files created
-    # in /data. As a workaround, postpone startup until later in boot once
-    # /data is mounted.
     class late_start
     user system
-    group system input
+    group system sdcard_rw
+    system system
+    writepid /dev/cpuset/system-background/tasks
     disabled
 
 service gx_fpd /system/bin/gx_fpd
