@@ -106,6 +106,16 @@ persist.gps.qc_nlp_in_use=1
 persist.loc.nlp_name=com.qualcomm.location
 ro.gps.agps_provider=1
 
+# Ims
+persist.dbg.volte_avail_ovr=1
+persist.radio.ROTATION_ENABLE=1
+persist.radio.VT_ENABLE=1
+persist.radio.VT_HYBRID_ENABLE=1
+persist.radio.VT_USE_MDM_TIME=0
+persist.dbg.vt_avail_ovr=1
+persist.volte_enabled_by_hw=1
+persist.data.iwlan.enable=true
+
 # Media
 media.msm8956hw=0
 mm.enable.smoothstreaming=true
@@ -163,13 +173,9 @@ persist.radio.csvt.enabled=false
 persist.vendor.radio.rat_on=combine
 persist.radio.mt_sms_ack=20
 persist.radio.apm_sim_not_pwdn=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
 persist.dbg.ims_volte_enable=1
-persist.dbg.volte_avail_ovr=1
-persist.dbg.vt_avail_ovr=1
 persist.radio.videopause.mode=1
-persist.data.iwlan.enable=true
+persist.radio.aosp_usr_pref_sel=true
 persist.dbg.wfc_avail_ovr=0
 persist.radio.sw_mbn_update=0
 persist.radio.hw_mbn_update=0
