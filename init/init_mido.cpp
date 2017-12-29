@@ -34,6 +34,9 @@
 #include "log.h"
 #include "util.h"
 
+namespace android {
+namespace init {
+
 char const *heapstartsize;
 char const *heapgrowthlimit;
 char const *heapsize;
@@ -128,4 +131,6 @@ void vendor_load_properties()
     property_set("ro.hwui.text_small_cache_height", "1024");
     property_set("ro.hwui.text_large_cache_width", "2048");
     property_set("ro.hwui.text_large_cache_height", large_cache_height);
+}
+}
 }
