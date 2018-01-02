@@ -1,0 +1,14 @@
+[
+  {
+    "remote": "github",
+    "repository":  "AospExtended-Devices/kernel_xiaomi_msm8953",
+    "target_path": "kernel/xiaomi/msm8953",
+    "branch": "8.1.x"
+  },
+  {
+    "remote": "github",
+    "repository":  "AospExtended-Devices/vendor_xiaomi_mido",
+    "target_path": "vendor/xiaomi",
+    "branch": "8.1.x"
+  }
+]
