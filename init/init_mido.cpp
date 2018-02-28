@@ -34,9 +34,6 @@
 #include "log.h"
 #include "util.h"
 
-namespace android {
-namespace init {
-
 char const *heapstartsize;
 char const *heapgrowthlimit;
 char const *heapsize;
