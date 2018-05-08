@@ -18,6 +18,9 @@
 
 DEVICE_PATH := device/xiaomi/mido
 
+# Extended Filesystem Support
+TARGET_EXFAT_DRIVER := sdfat
+
 # Filesystem
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
