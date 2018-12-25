@@ -46,6 +46,8 @@ on boot
     chown system system /sys/class/tp_glove/device/glove_enable
     chmod 0660 /sys/class/tp_glove/device/glove_enable
 
+    #Set min gpu freq to 320mhz
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 320000000
 
 service gx_fpd /system/vendor/bin/gx_fpd
      class core
