@@ -16,11 +16,5 @@
     "repository":  "thp1997/proprietary_vendor_xiaomi",
     "target_path": "vendor/xiaomi",
     "branch":      "9.x"
-  },
-  {
-    "remote":      "los",
-    "repository":  "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings",
-    "branch":      "lineage-15.1"
   }
 ]
