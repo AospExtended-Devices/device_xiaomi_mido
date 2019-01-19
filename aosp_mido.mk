@@ -22,7 +22,12 @@ $(call inherit-product, vendor/aosp/common.mk)
 # Include Bootanimation configuration
 TARGET_BOOT_ANIMATION_RES := 1080
 
+PRODUCT_DEVICE := mido
 PRODUCT_NAME := aosp_mido
+PRODUCT_BRAND := Xiaomi
+PRODUCT_MODEL := Redmi Note 4
+PRODUCT_MANUFACTURER := Xiaomi
+TARGET_VENDOR := Xiaomi
 BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
