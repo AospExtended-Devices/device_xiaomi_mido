@@ -9,7 +9,7 @@
     "remote":      "github",
     "repository":  "thp1997/android_kernel_xiaomi_msm8953",
     "target_path": "kernel/xiaomi/msm8953",
-    "branch":      "8.1.x-treble"
+    "branch":      "8.1.x"
   },
   {
     "remote":      "github",
